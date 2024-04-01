@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100% !important;
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/1849553-fundo-ouro-moderno-vetor.jpg);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: saturate(180%) blur(50px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: saturate(180%) blur(50px);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.header:hover::after {
+  left: 100%;
+}
+
+ul {
+  display: flex;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.items {
+  list-style: none;
+}
+
+.navbar a {
+  font-size: 1.15rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+
+#check {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.items a {
+  position: relative;
+  text-decoration: none;
+}
+
+.items a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.items a:hover {
+  color: #a7a3a3;
+  transition: all 0.2s;
+
+}
+
+.items a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#p1{
+  right: 12.5rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: saturate(180%) blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #check:checked ~ .navbar {
+    height: 10.7rem;
+  }
+
+  .navbar ul {
+    display: block;
+  }
+
+.header {
+    padding: 1.3rem 5%; /* Ajuste do padding para telas menores */
+  }
+
+  nav.navbar {
+    text-align: center; /* Centraliza todo o conteúdo do menu */
+  }
+
+  .navbar ul {
+    display: inline-block; /* Exibe os itens do menu em linha */
+    padding: 0; /* Remove o padding padrão da lista */
+  }
+
+  .items {
+    display: inline-block; /* Exibe os itens do menu em linha */
+    margin: 0 10px; /* Espaçamento entre os itens do menu */
+  }
+
+  ul a {
+    display: inline-block; /* Permite ajustar a largura e centralizar */
+    font-size: 1.1rem;
+    margin: 1.5rem 0; /* Margem superior e inferior */
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: 0.3s ease;
+    width: fit-content; /* Ajusta a largura do link de acordo com o conteúdo */
+    position: relative; /* Define o posicionamento relativo para que o ::before fique relativo a este elemento */
+  }
+
+  ul a::before {
+    content: '';
+    position: absolute;
+    width: 100%; /* Largura do sublinhado igual à largura do texto */
+    height: 1px; /* Altura reduzida do sublinhado */
+    bottom: -1px; /* Posição ajustada do sublinhado */
+    background-color: white;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+
+  ul a:hover::before {
+    visibility: visible;
+    width: 100%; /* Largura do sublinhado igual à largura do texto */
+  }
+
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
+    display: flex;
+    flex-direction: column;
+  }
+
+  #p1{
+    right: 0;
+  }
+}
