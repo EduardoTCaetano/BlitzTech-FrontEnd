@@ -1,0 +1,46 @@
+.sec-home {
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: center;
+  height: 100vh;
+}
+
+.home-container {
+  margin-left: 20px; /* Adiciona um espaço à esquerda */
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  width: 90%;
+}
+
+.home-context {
+  padding: 4rem;
+  margin: 0 auto;
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  row-gap: 2rem;
+}
+
+h1 {
+  font-size: 82px;
+  filter: drop-shadow(rgb(0, 0, 0) 0rem 0rem 10px);
+}
+
+p {
+  font-size: 18px;
+  filter: drop-shadow(rgb(0, 0, 0) 0rem 0rem 10px);
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  right: 15vh;
+  transform: translate(0, -50%);
+  opacity: 1;
+  width: 90%;
+  filter: drop-shadow(rgb(255, 89, 0) 0rem 0rem 10px);
+}
