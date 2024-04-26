@@ -7,6 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { AboutComponent } from './components/about/about.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { AboutComponent } from './components/about/about.component';
     NavbarComponent,
     HomeComponent,
     IntroductionComponent,
-    AboutComponent
+    AboutComponent,
+    CarouselComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideClientHydration()

@@ -1,55 +1,9 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .container {
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f4f4f4; /* Metade branca */
-}
-
-.background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background-color: #ab360a; /* Metade laranja */
-}
-
-.content {
-  position: relative;
-  z-index: 1; /* Garante que o conteúdo fique sobreposto ao background */
-  padding: 20px;
-  color: black; /* Cor do texto */
-}
-
-img {
+  background-image: url(/assets/mv_3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  filter: drop-shadow(rgb(255, 89, 0) 0rem 0rem 10px);
-  max-width: 100%;
-  height: auto;
 }
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Isso garante que a imagem seja centralizada verticalmente */
-}
-
