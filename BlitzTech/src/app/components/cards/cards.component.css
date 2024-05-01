@@ -9,13 +9,13 @@ main.cards {
   color: white;
 }
 
-main.cards:hover {
+main.cards section.card:hover {
   transform: scale(0.98);
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.918);
+  background-color: #282828;
   border: 4px solid rgb(224, 123, 7);
  }
- 
+
 main.cards section.card {
   display: flex;
   flex-direction: column;
