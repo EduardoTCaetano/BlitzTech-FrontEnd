@@ -1,22 +1,20 @@
-html,
-body {
-  height: 100% !important;
-}
-
-main.cards {
+div.cards {
   display: flex;
-  padding: 12px;
+  flex-wrap: wrap; /* Permite que os cartões sejam exibidos em várias linhas */
+  padding-bottom: 20px;
   color: white;
 }
 
-main.cards section.card:hover {
+div.cards section.card:hover {
   transform: scale(0.98);
   border-radius: 20px;
-  background-color: #282828;
+  background-color: #1d1d1d;
   border: 4px solid rgb(224, 123, 7);
- }
+  transition: all 0.5s;
+}
 
-main.cards section.card {
+div.cards section.card {
+  flex: 1; /* Faz com que os cartões ocupem o mesmo espaço horizontalmente */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,30 +22,29 @@ main.cards section.card {
   background: #282828;
   padding: 1rem 1.5rem;
   border-radius: 8px;
-  margin-left: 32px;
-  margin: 0 16px 16px 0; /* Espaçamento entre os cartões */
-
+  margin-right: 16px; /* Espaçamento entre os cartões */
+  margin-bottom: 16px;
 }
 
-main.cards section.card:first-child {
-  margin-left: 0;
+div.cards section.card:last-child {
+  margin-right: 0; /* Remove o espaçamento do último cartão */
 }
 
-main.cards section.card .icon {
-  width: 164px;
-  height: 164px;
+div.cards section.card .icon {
+  width: 120px; /* Reduz o tamanho do ícone */
+  height: 120px; /* Reduz o tamanho do ícone */
 }
 
-main.cards section.card img {
+div.cards section.card img {
   width: 100%;
 }
 
-main.cards section.card h3 {
+div.cards section.card h3 {
   font-size: 100%;
   margin: 16px 0;
 }
 
-main.cards section.card span {
+div.cards section.card span {
   font-weight: 400;
   max-width: 640px;
   font-size: 80%;
@@ -58,35 +55,17 @@ h3 {
   color: #ff6000;
   font-family: "Bungee Spice", sans-serif;
 }
-
-main.cards section.card.contact {
-  box-shadow: 20px 20px 50px -30px #ffffff;
-}
-main.cards section.card.shop {
-  box-shadow: 20px 20px 50px -30px #ffffff;
-}
-main.cards section.card.about {
-  box-shadow: 20px 20px 50px -30px #ffffff;
+div.cards section.card:not(:last-child) {
+  margin-right: 8px; /* Adiciona espaçamento entre os cartões */
 }
 @media screen and (max-width: 720px) {
-  main.cards section.card {
-    margin-left: 0;
-    margin-bottom: 32px;
-    flex-grow: 1; /* Adicionado para ocupar todo o espaço disponível */
-  }
-
-  main.cards {
-    flex-direction: column;
-  }
-
-  main.cards section.card:last-child {
-    margin-bottom: 0;
-  }
-
-  main.cards section.card button {
-    font-size: 70%;
-  }
-  main.cards section.card {
+  div.cards section.card {
     flex-basis: calc(50% - 16px); /* Dois cartões por linha com espaçamento */
+    margin-right: 0;
+  }
+
+  div.cards section.card .icon {
+    width: 50px; /* Reduz o tamanho do ícone em telas menores */
+    height: 50px; /* Reduz o tamanho do ícone em telas menores */
   }
 }
