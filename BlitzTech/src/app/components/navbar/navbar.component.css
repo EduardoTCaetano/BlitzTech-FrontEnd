@@ -107,7 +107,7 @@ ul {
 }
 
 .items a:hover {
-  color: #c05513;
+  color: #535353;
   transition: all 0.6s;
   filter: drop-shadow(rgba(255, 115, 0, 0.722) 0rem 0rem 10px);
 }
