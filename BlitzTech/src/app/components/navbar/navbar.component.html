@@ -11,16 +11,17 @@
       </label>
       <nav class="navbar">
         <ul>
-          <li class="items"><a href="" style="--i: 0">Home</a></li>
-          <li class="items"><a href="" style="--i: 1">Sobre nós</a></li>
-          <li class="items"><a href="" style="--i: 2">Contato</a></li>
+          <li class="items"><a href="#" style="--i: 0">Home</a></li>
+          <li class="items"><a href="#" style="--i: 1">Sobre nós</a></li>
+          <li class="items"><a [routerLink]="['/home']">Navegar</a>
+          </li>
           <li class="items">
-            <a href="" style="--i: 3"
+            <a href="#" style="--i: 3"
               ><i class="bx bxs-cart"></i> Seu carrinho
             </a>
           </li>
           <li class="items">
-            <a href="" style="--i: 4"
+            <a href="/login" style="--i: 4"
               ><i class="bx bx-user" id="user-icon"></i>User</a
             >
           </li>
