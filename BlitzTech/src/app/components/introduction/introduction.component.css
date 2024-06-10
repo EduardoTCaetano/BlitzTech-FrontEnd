@@ -17,6 +17,11 @@
   background: #1a2238;
 }
 
+.product-card:hover {
+  border: 4px solid rgb(182, 83, 6);
+  transition: all 0.5s;
+}
+
 .spacing {
   margin-top: 80px;
 }
@@ -39,7 +44,7 @@
   justify-content: center;
   height: 300px;
   padding: 50px;
-  background-image: linear-gradient(#ff6000, #c34d04);
+  background-image: linear-gradient(#d3d2d2, #969595);
 }
 
 .product-thumb img {
@@ -71,7 +76,7 @@
 }
 
 .product-details h4 a:hover {
-  color: #f52544;
+  color: #ea741b;
 }
 
 .product-details p {
@@ -111,7 +116,6 @@
   color: #ff6000;
 }
 
-/* Botão */
 
 .button {
   width: 180px;

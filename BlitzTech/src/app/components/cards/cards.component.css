@@ -1,3 +1,9 @@
+.cards{
+  background-image: url(/assets/mv_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 div.cards {
   display: flex;
   flex-wrap: wrap; /* Permite que os cartões sejam exibidos em várias linhas */
@@ -14,7 +20,7 @@ div.cards section.card:hover {
 }
 
 div.cards section.card {
-  flex: 1; /* Faz com que os cartões ocupem o mesmo espaço horizontalmente */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,17 +28,17 @@ div.cards section.card {
   background: #282828;
   padding: 1rem 1.5rem;
   border-radius: 8px;
-  margin-right: 16px; /* Espaçamento entre os cartões */
+  margin-right: 16px;
   margin-bottom: 16px;
 }
 
 div.cards section.card:last-child {
-  margin-right: 0; /* Remove o espaçamento do último cartão */
+  margin-right: 0;
 }
 
 div.cards section.card .icon {
-  width: 120px; /* Reduz o tamanho do ícone */
-  height: 120px; /* Reduz o tamanho do ícone */
+  width: 120px;
+  height: 120px;
 }
 
 div.cards section.card img {
@@ -56,16 +62,16 @@ h3 {
   font-family: "Bungee Spice", sans-serif;
 }
 div.cards section.card:not(:last-child) {
-  margin-right: 8px; /* Adiciona espaçamento entre os cartões */
+  margin-right: 8px;
 }
 @media screen and (max-width: 720px) {
   div.cards section.card {
-    flex-basis: calc(50% - 16px); /* Dois cartões por linha com espaçamento */
+    flex-basis: calc(50% - 16px);
     margin-right: 0;
   }
 
   div.cards section.card .icon {
-    width: 50px; /* Reduz o tamanho do ícone em telas menores */
-    height: 50px; /* Reduz o tamanho do ícone em telas menores */
+    width: 50px;
+    height: 50px;
   }
 }

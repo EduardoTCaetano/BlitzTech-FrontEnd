@@ -9,8 +9,6 @@
 
 html,
 body {
-  height: 100% !important;
-  line-height: 1.7;
   scroll-behavior: smooth;
   background-color: #f4f4f4;
 }

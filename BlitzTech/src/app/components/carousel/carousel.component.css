@@ -20,8 +20,8 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(33, 88%, 37%, 0.512);
+  border-radius: 5%;
   -ms-overflow-style: none;
   scrollbar-width: none;
   width: 98vw; /* largura ocupando 100% da tela */

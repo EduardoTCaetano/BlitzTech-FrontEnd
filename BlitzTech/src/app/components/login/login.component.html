@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="parent">
+    <div class="container" [ngClass]="isSignDivVisiable ? 'active' :'' " id="container">
+        <div class="form-container sign-up" >
+            <form (ngSubmit)="onRegister()">
+                <h1>Criar Conta</h1>
+                <span>ou use seu e-mail para se registrar</span>
+                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Nome" required>
+                <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email" required>
+                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Senha" required>
+                <div *ngIf="signUpError" class="error-message">{{ signUpError }}</div> <!-- Mensagem de erro -->
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+        <div class="form-container sign-in" >
+            <form (ngSubmit)="onLogin()">
+                <h1>Entrar</h1>
+                <span>ou use sua senha de e-mail</span>
+                <input type="email" name="email" [(ngModel)]="loginObj.email" placeholder="Email" required>
+                <input type="password" name="password"   [(ngModel)]="loginObj.password" placeholder="Senha" required>
+                <div *ngIf="loginError" class="error-message">{{ loginError }}</div> <!-- Mensagem de erro -->
+                <a href="#">→ Esqueceu sua senha? ←</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Insira seus detalhes pessoais para usar todos os recursos do site</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá, Amigo!</h1>
+                    <p>Registre-se com seus detalhes pessoais para usar todos os recursos do site</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
