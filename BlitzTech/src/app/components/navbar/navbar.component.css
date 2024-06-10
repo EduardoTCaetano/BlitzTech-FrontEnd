@@ -186,7 +186,7 @@ img {
   ul a {
     display: inline-block; /* Permite ajustar a largura e centralizar */
     font-size: 1.1rem;
-    margin: 1.5rem 0; /* Margem superior e inferior */
+    margin: 3.5rem 0; /* Margem superior e inferior */
     text-align: center;
     transform: translateY(-50px);
     opacity: 0;
@@ -268,4 +268,46 @@ img {
 
 .navbar .items ul li ul li {
   margin-left: 0;
+}
+
+/* Responsividade para submenus */
+
+@media (max-width: 904px) {
+  .navbar .items ul {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .navbar .items:hover ul {
+    display: block;
+    position: relative;
+  }
+
+  .navbar .items ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar .items ul ul {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+  }
+
+  .navbar .items ul li:hover > ul {
+    display: block;
+    position: relative;
+  }
+
+  .navbar .items ul li ul li {
+    margin-left: 0;
+  }
+
+  .navbar .items ul li a {
+    padding: 1rem;
+    text-align: center;
+  }
 }
