@@ -24,8 +24,8 @@
   border-radius: 5%;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  width: 98vw; /* largura ocupando 100% da tela */
-  height: 70vh; /* altura ocupando 100% da tela */
+  width: 98vw; 
+  height: 70vh;
   margin-left: -210px;
 }
 
@@ -37,7 +37,7 @@
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
-  animation: slider 30s infinite; /* Adicionado */
+  animation: slider 30s infinite;
 }
 
 @keyframes slider {

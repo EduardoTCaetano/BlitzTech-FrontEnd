@@ -1,30 +1,22 @@
 .carousel {
   position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
   overflow: hidden;
 }
 
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
 .carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  height: 500px; /* Defina a altura que desejar */
-  transition: transform 0.6s ease-in-out;
+  flex: 0 0 100%;
+  height: 500px;
 }
 
 .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.carousel-item.active {
-  display: block;
 }
 
 .carousel-control-prev,
@@ -117,3 +109,4 @@
   color: #fff;
   text-align: center;
 }
+
