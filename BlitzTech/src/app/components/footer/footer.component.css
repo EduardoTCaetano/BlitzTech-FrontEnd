@@ -40,6 +40,10 @@ footer {
   text-align: center;
 }
 
+p {
+  text-align: justify;
+}
+
 .p-list {
   padding: 0;
 }

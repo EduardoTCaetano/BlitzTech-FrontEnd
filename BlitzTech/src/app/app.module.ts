@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { AdvertisingComponent } from './components/advertising/advertising.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CardsComponent } from './components/cards/cards.component';
     CarouselComponent,
     FooterComponent,
     CardsComponent,
+    AdvertisingComponent,
   ],
   imports: [
     BrowserModule,
